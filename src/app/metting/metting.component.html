@@ -1,0 +1,35 @@
+<div class="FORMULAIRE">
+    <br>
+    <div class="container">
+        <div class="position-static">
+    <form [formGroup]="mettingForm" (ngSubmit)="onSubmit()">
+        <div>
+            Votre nom
+            <input type="text" formControlName="name" placeholder="tapez votre nom" maxlength="20" required>
+            <br>
+        </div>
+         <div><br>
+            Genre
+          <select name="" formControlName="gender" id="">
+
+            <option value="F">Female</option><option value="M">Male</option>
+          </select>
+            <br>
+        </div>
+        <div>
+            <br>
+
+            <label>
+                Date de naissance:
+                <input type="date" formControlName="date" name="day">
+            </label>
+            <div>
+                <br>
+        <button type="submit" class="btn btn-danger">valider</button>
+
+            </div>
+            <br>
+        </div>
+    </form>
+</div>
+<div *ngIf="data"><p>{{data.name}}</p><p>{{data.gender}}</p><p>{{data.date}}</p></div>
